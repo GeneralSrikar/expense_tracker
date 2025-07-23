@@ -1,0 +1,4 @@
+1. GroupCode!=AdminCode
+2. Email has to go with adminCode and groupCode initially
+3. GroupCode and AdminCode cannot be more then 4 characters and less than 7 characters
+

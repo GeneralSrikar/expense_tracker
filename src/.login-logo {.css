@@ -1,0 +1,90 @@
+.login-logo {
+  display: block;
+  margin: 40px auto 20px auto; /* Center and add spacing */
+  max-width: 200px;
+  height: auto;
+  position: static; /* Remove absolute positioning */
+}
+
+.attendance-bg {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attendance-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  padding: 40px 32px 32px 32px;
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.attendance-title {
+  font-size: 2em;
+  color: #007bff;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.header1 {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.attendance-icon {
+  font-size: 1.5em;
+}
+
+.input-field {
+  flex: 1;
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f7faff;
+  transition: border 0.2s;
+}
+
+.input-field:focus {
+  border: 1.5px solid #007bff;
+  outline: none;
+  background: #eaf4ff;
+}
+
+.bottom-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.bottom-button {
+  padding: 12px 32px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.bottom-button:hover {
+  background-color: #0056b3;
+}
