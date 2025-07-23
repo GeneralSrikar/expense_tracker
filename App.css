@@ -1,0 +1,875 @@
+.attendance-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb); /* Lighter blue gradient background */
+  padding-top: 60px;
+  scale: 0.95;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 350px; /* Reduced max-width for a smaller form */
+  background-color: white;
+  padding: 20px; /* Reduced padding for a smaller form */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+label {
+  margin: 10px 0 5px; /* Adjusted margin for a smaller layout */
+  font-weight: bold;
+}
+
+input {
+  padding: 8px; /* Reduced padding for a smaller layout */
+  margin-bottom: 15px; /* Adjusted margin for a smaller layout */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+button {
+  padding: 10px 20px; /* Adjusted padding for a smaller layout */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px; /* Adjusted margin for a smaller layout */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: white;
+  color: black;
+  padding: 10px; /* Reduced padding for a smaller layout */
+  margin: 5px 0; /* Adjusted margin for a smaller layout */
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.react-calendar {
+  width: 100%;
+  max-width: 300px; /* Reduced max-width for a smaller calendar */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+  margin-bottom: 20px; /* Adjusted margin for a smaller layout */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Adjusted margin for a smaller layout */
+  padding: 10px; /* Reduced padding for a smaller layout */
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px 8px 0 0;
+}
+
+.react-calendar__navigation button {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 14px; /* Reduced font size for a smaller layout */
+  cursor: pointer;
+  padding: 5px 10px; /* Reduced padding for a smaller layout */
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.react-calendar__navigation button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.react-calendar__month-view__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Ensure 7 columns for weekdays */
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px; /* Adjusted margin for a smaller layout */
+  padding: 5px; /* Reduced padding for a smaller layout */
+  background-color: #f0f0f0;
+  border-radius: 0 0 8px 8px;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 5px; /* Reduced padding for a smaller layout */
+  text-transform: uppercase;
+  font-size: 0.8em; /* Reduced font size for a smaller layout */
+  color: #007bff;
+}
+
+.react-calendar__month-view__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Ensure 7 columns for days */
+  gap: 4px; /* Reduced gap for a smaller layout */
+  padding: 5px; /* Reduced padding for a smaller layout */
+}
+
+.react-calendar__tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px; /* Reduced height for a smaller layout */
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 12px; /* Reduced font size for a smaller layout */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
+  text-align: center;
+  color: black;
+}
+
+.react-calendar__tile--now {
+  background-color: #ffeb3b;
+  color: black;
+}
+
+.react-calendar__tile--active {
+  background-color: #007bff;
+  color: white;
+}
+
+.react-calendar__tile:hover {
+  background-color: #e6e6e6;
+}
+
+.react-calendar__tile--active:hover {
+  background-color: #0056b3;
+}
+
+/* Additional styles for other components */
+.signup-container {
+  max-width: 500px;
+  margin: 40px auto; /* Adjusted margin to accommodate the larger image */
+  padding: 60px;
+  border-radius: 8px;
+  position: relative; /* Ensure the container is positioned relative to the image */
+  margin-top: -10px;
+}
+.login-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 60px;
+  border-radius: 8px;
+  position: relative;
+  margin-top: -10px;
+  /* Ensure the background covers all inner content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-logo {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 300px;
+  height: auto;
+  position: absolute;
+  top: -140px;
+  left: 50%;
+  transform: translateX(-40%);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  margin: 10px 0 5px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#forgotPasswordButton {
+  background: none;
+  border: none;
+  color: darkblue;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+  margin-top: 5px; /* Adjusted margin to move the button up */
+}
+
+#errorMessage {
+  color: red;
+  margin-top: 10px;
+}
+
+.links-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px; /* Adjusted margin to move the container up */
+  width: 100%;
+  background: transparent;
+  /* Place inside the .login-container's white background */
+  padding: 0 10px;
+}
+
+.signup-link {
+  color: darkblue;
+  text-decoration: underline;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Center the home-container */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  text-align: center;
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb); /* Lighter blue gradient background */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 8px; /* Rounded corners */
+  color: white; /* White text color for better contrast */
+  position: relative; /* Ensure the container is positioned relative to the logout button */
+}
+
+/* Arrange buttons vertically */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+/* Style the buttons */
+.home-button {
+  margin: 50px 0; /* Space between buttons */
+  padding: 15px 30px; /* Consistent padding for all buttons */
+  font-size: 18px; /* Consistent font size */
+  cursor: pointer;
+  background-color: #007bff; /* Primary color */
+  color: white;
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  width: 200px; /* Consistent width for all buttons */
+  text-align: center; /* Center text within the button */
+}
+
+.home-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Style the logout button */
+.logout-button {
+  position: absolute;
+  top: -30px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: grey; /* Red color for logout */
+  color: white;
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.logout-button:hover {
+  background-color: #cc0000; /* Darker shade on hover */
+}
+
+/* Additional styling for text */
+.home-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: white; /* White text color for better contrast */
+}
+
+.home-container p {
+  font-size: 1.2em;
+  color: #e0e0e0; /* Light gray text color */
+  margin-bottom: 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: transparent; /* Remove background color */
+}
+
+.user-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+  color: black; /* Ensure the text color is black for better contrast */
+}
+
+.logout-button {
+  margin-left: 10px;
+  background-color: #ff4d4d; /* Red color for logout */
+  color: white;
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.logout-button:hover {
+  background-color: #cc0000; /* Darker shade on hover */
+}
+
+/* Styles specific to the Game History page */
+/* Add these styles to your existing App.css file */
+
+.game-history-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the top */
+  min-height: 100vh; /* Full viewport height */
+  text-align: center;
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+  padding: 20px; /* Adjusted padding for more space */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: transparent; /* Remove background color */
+}
+.header1 {
+  display: flex;
+  flex-direction: column; /* Stack rows vertically */
+  align-items: center; /* Center all children horizontally */
+  gap: 20px; /* Add spacing between rows */
+  margin-bottom: 20px;
+  margin-top: 40px; /* Reduce margin-top to move fields higher */
+}
+.row {
+  display: flex;
+  align-items: center; /* Align headers and inputs vertically */
+  gap: 20px; /* Spacing between the label and the input field */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  width: 100%; /* Full width for better centering */
+  justify-content: center; /* Center row content */
+  margin-bottom: -20px; /* Reduce spacing between rows */
+}
+.logout-button {
+  margin-left: 10px;
+  background-color: #ff4d4d; /* Red color for logout */
+  color: white;
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.logout-button:hover {
+  background-color: #cc0000; /* Darker shade on hover */
+}
+
+.game-history-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  padding: 20px; /* Adjusted padding for more space */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the checkboxes */
+  width: 100%;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center align the checkboxes */
+  margin-bottom: 10px; /* Space between each checkbox item */
+}
+
+.checkbox-item label {
+  margin-right: 10px; /* Space between label and checkbox */
+}
+
+label {
+  margin: 15px 0 10px; /* Increased margin for more space */
+  font-weight: bold;
+}
+
+input[type="date"] {
+  padding: 12px; /* Increased padding for more space */
+  margin-bottom: 20px; /* Increased margin for more space */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+button {
+  padding: 12px 24px; /* Increased padding for more space */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  margin-top: 15px; /* Increased margin for more space */
+}
+/* Add these styles to your existing App.css file */
+
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 150vh; /* Full viewport height */
+  text-align: center;
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+  padding: 55px; /* Increased padding for more space */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: white;
+}
+
+.date-picker {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+  text-align: center;
+}
+/* General container styling */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  text-align: center;
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+  padding: 100px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+.logout-button {
+  margin-left: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #cc0000;
+}
+
+/* Arrange Add, Delete, and Update sections horizontally */
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+  gap: 15px; /* Add spacing between the boxes */
+}
+
+.form-box {
+  flex: 1; /* Make each box take equal space */
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the top */
+  padding: 15px;
+  height: auto; /* Adjust height dynamically based on content */
+}
+
+.form-box h2 {
+  width: 100%;
+  background-color: white; /* Dark background for the header */
+  color: black;
+  text-align: center;
+  padding: 10px;
+  margin: 0 0 15px 0; /* Add spacing below the header */
+  border-radius: 4px;
+  font-size: 1.2em;
+}
+
+.form-box form {
+  width: 90%; /* Ensure the form takes full width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Add spacing between form elements */
+}
+
+.form-box input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-box button {
+  width: 90%; /* Make the button fill the width of the form */
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-box button:hover {
+  background-color: #0056b3;
+}
+
+.member-list-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  color: black;
+
+  /* Add scrolling */
+  max-height: 400px; /* Set a fixed height for the container */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.member-list-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.member-list-container th,
+.member-list-container td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.member-list-container th {
+  background-color: lightskyblue;
+  color: white;
+  font-weight: bold;
+}
+
+.member-list-container tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.member-list-container tr:hover {
+  background-color: #f1f1f1;
+}
+.welcome-section {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-end; /* Align items to the right */
+  padding: 10px 20px; /* Add padding for spacing */
+  position: absolute; /* Position the section absolutely */
+  top: 0; /* Align to the top of the page */
+  right: 0; /* Align to the right of the page */
+  width: auto; /* Adjust width dynamically */
+  background-color: transparent; /* Optional: Transparent background */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  font-size: 0.9;
+}
+
+.welcome-section h1 {
+  font-size: 1.2em; /* Adjust font size */
+  margin: 0 0 10px 0; /* Add spacing below the welcome message */
+  color: #333; /* Set text color */
+}
+
+.logout-button {
+  padding: 8px 16px;
+  background-color: grey; /* Red color for logout */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-col  or 0.3s ease;
+  margin-top: 50px; /* Add spacing above the button */
+  margin-right: 40px; /* Add spacing to the right */
+}
+.logout-button1 {
+  padding: 8px 16px;
+  color: grey;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: -10px; /* Add spacing above the button */
+  margin-right: 0px; /* Add spacing to the right */
+  text-decoration: underline;
+}
+.bottom-button-container {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  align-items: center;    /* Center horizontally */
+  gap: 20px;              /* Space between buttons */
+  margin-top: 20px;       /* Optional: space above buttons */
+}
+.bottom-button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue background color */
+  color: white; /* White text color */
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  font-size: 1em;
+  cursor: pointer;
+  gap: 50px; /* Space between the button and the text */
+  transition: background-color 0.3s ease;
+}
+.bot-button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue background color */
+  color: white; /* White text color */
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  font-size: 5em;
+  cursor: pointer;
+  gap: 50px; /* Space between the button and the text */
+  transition: background-color 0.3s ease;
+}
+
+.bottom-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+h1 {
+  font-size: 1.5em;
+  color: #333; /* Dark text color */
+  margin: 0; /* Remove default margin */
+  width: 200px; /* Set a fixed width for the label */
+  text-align: right; /* Align text to the right */
+  white-space: nowrap; /* Prevent the label from wrapping to the next line */
+}
+.input-field {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  width: 250px; /* Set a fixed width for the input fields */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+  margin-top: 20px; /* Add some space above the input fields */
+}
+.home-title {
+  text-align: center; /* Center the text horizontally */
+  margin: 0 auto 30px auto; /* Adjust spacing above and below the title */
+  font-size: 2em; /* Adjust the font size for better visibility */
+  color: #333; /* Optional: Set a dark text color */
+  width: 100%; /* Ensure the title spans the full width */
+}
+
+/* Add this for the header row on the home page */
+.home-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 40px auto; /* Center and add space below */
+  padding: 0 20px;
+}
+/* Add these to your App.css */
+.attendance-layout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.member-checklist {
+  min-width: 180px;
+  margin-right: 20px;
+}
+
+.checklist-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.checklist-items label {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.activity-info {
+  flex: 1;
+  min-width: 320px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+.new-password-section {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 16px 0;
+}
+.new-password-section {
+  margin-top: 20px;
+}
+
+.field-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.field-pair {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ===== Remove number-input spinners (all browsers) ===== */
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield !important;
+}
+
+/* If you’re using any CSS modules or scoped styles, ensure this is truly global:
+   in CRA / a standard setup, just placing it at the end of App.css should be enough. */
+
+/* Rest of your existing styles... */
